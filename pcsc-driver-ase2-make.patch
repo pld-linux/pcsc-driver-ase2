@@ -1,0 +1,37 @@
+--- ase_drive/Makefile.orig	Tue Sep 24 16:39:41 2002
++++ ase_drive/Makefile	Wed Jul  2 12:52:00 2003
+@@ -15,26 +15,26 @@
+ 	rm -f *.o *.so $(SLIBNAME) $(DLIBNAME)
+ 
+ dlib: $(DOBJS)
+-	$(LD) -shared $(DOBJS) -o $(DLIBNAME)
++	$(CC) -shared $(DOBJS) -o $(DLIBNAME) -Wl,-soname=$(DLIBNAME)
+ 
+ slib: $(SOBJS)
+-	$(LD) -shared $(SOBJS) -o $(SLIBNAME)
++	$(CC) -shared $(SOBJS) -o $(SLIBNAME) -Wl,-soname=$(SLIBNAME)
+ 
+ serial.o: serial.h serial.c
+-	$(CC) -c serial.c
++	$(CC) $(CFLAGS) -c serial.c
+ 
+ AdmHndlr.o: AdmHndlr.h AdmHndlr.c
+-	$(CC) -c AdmHndlr.c
++	$(CC) $(CFLAGS) -c AdmHndlr.c
+ 
+ T0Hndlr.o: T0Hndlr.h T0Hndlr.c
+-	$(CC) -c T0Hndlr.c
++	$(CC) $(CFLAGS) -c T0Hndlr.c
+ 
+ T1Hndlr.o: T1Hndlr.h T1Hndlr.c
+-	$(CC) -c T1Hndlr.c
++	$(CC) $(CFLAGS) -c T1Hndlr.c
+ 
+ ifdhandler_dual.o: ifdhandler.h ifdhandler_dual.c
+-	$(CC) -c ifdhandler_dual.c
++	$(CC) $(CFLAGS) -c ifdhandler_dual.c
+ 
+ ifdhandler_single.o: ifdhandler.h ifdhandler_single.c
+-	$(CC) -c ifdhandler_single.c
++	$(CC) $(CFLAGS) -c ifdhandler_single.c
+ 
