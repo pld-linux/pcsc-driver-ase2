@@ -1,5 +1,5 @@
 Summary:	PC/SC Lite driver for the Athena Smartcard Solutions II reader
-Summary(pl):	Sterownik PC/SC Lite dla czytnika Athena Smartcard Solutions II
+Summary(pl.UTF-8):   Sterownik PC/SC Lite dla czytnika Athena Smartcard Solutions II
 Name:		pcsc-driver-ase2
 Version:	1.1.1
 Release:	1
@@ -14,7 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 PC/SC Lite driver for the Athena Smartcard Solutions II reader.
 
-%description -l pl
+%description -l pl.UTF-8
 Sterownik PC/SC Lite dla czytnika Athena Smartcard Solutions II.
 
 %prep
