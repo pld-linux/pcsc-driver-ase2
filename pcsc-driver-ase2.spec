@@ -19,7 +19,7 @@ Sterownik PC/SC Lite dla czytnika Athena Smartcard Solutions II.
 
 %prep
 %setup -q -n ase_drive
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} \
